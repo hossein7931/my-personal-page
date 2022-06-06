@@ -1,0 +1,411 @@
+html {
+    --first-color: rgb(120, 117, 211);
+    --first-second: rgb(148, 16, 73);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Shabnam", "Tahoma";
+    background-color: rgb(235, 227, 227);
+}
+
+/* navbar */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 4rem;
+    background-color: rgb(235, 227, 227);
+    z-index: 99;
+}
+
+.nav-list ul {
+    display: flex;
+    list-style: none;
+    direction: rtl;
+    justify-content: center;
+
+}
+
+.nav-list ul li a {
+    text-decoration: none;
+    padding: 0px .6rem;
+    transition-duration: 0.4s;
+    color: black;
+    transition-timing-function: ease;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.nav-list ul li a:hover {
+    color: rgb(177, 62, 150);
+    font-weight: bold;
+    font-size: 20px;
+   padding: 14px;
+ }   
+
+
+
+/* end of navbar */
+
+/* Font */
+@font-face {
+    font-family: Shabnam;
+    src: url("/font/Shabnam-Bold.eot");
+    src: url("/font/Shabnam-Bold.eot?#iefix") format("FontName-opentype"),
+        url("/font/Shabnam.woff") format("woff"),
+        url("/font/Shabnam.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* end of Fonts */
+
+/* social */
+.home-social {
+    position: fixed;
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.social-icon-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social-icon-list li {
+    font-size: 2rem;
+    padding: 0.3rem 0;
+}
+
+.home-social-link {
+    color: #bbb;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.home-social-link:hover {
+    color: var(--first-second);
+    font-size: 60px;
+    text-shadow: 0px 3px 5px rgb(51, 87, 232);
+    cursor: pointer;
+}
+
+/* end of social */
+
+/* home */
+
+.home {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+
+}
+
+.home-img-profile {
+    max-width: 400px;
+    border-radius: 60% 40% 30% 70%;
+    box-shadow: 2px 4px 5px black;
+    transition: 0.4s;
+
+}
+
+.home-img-profile:hover {
+    transform: scale(1.04, 1.04);
+    box-shadow: 0px 0px 8px rgb(211, 80, 14);
+    border-color: blueviolet;
+    border-width: 3px;
+}
+
+.home-info h1 {
+    font-family: "Shabnam";
+    text-align: right;
+    font-size: 3rem;
+    line-height: 1.7;
+    font-weight: bold;
+
+}
+
+.button {
+    display: inline-block;
+    font-family: "Shabnam";
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border-color: navy;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    border-radius: 10% 23% 10% 23%;
+    background-color: coral;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.button:hover {
+    border-radius: 8px;
+    border-color: teal;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: teal;
+    color: white;
+
+}
+
+.button:active {
+    transform: scale(1.2, 1.2);
+}
+
+.home-info-name {
+    color: rgb(159, 21, 21);
+    text-shadow: 0px 1px 4px black;
+    position: relative;
+}
+
+.home-info-name::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    background-color: rgb(24, 15, 9);
+    border-radius: 20px;
+    animation: swipe-in 1s;
+}
+
+@keyframes swipe-in {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+/* end of home */
+/* about me */
+/* Section */
+section {
+    width: 60%;
+    height: 100vh;
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: rgb(250, 101, 20);
+    border-bottom: 3px solid black;
+    margin-top: 4rem;
+}
+
+/* about container */
+.about-container {
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(191, 201, 201); */
+    flex-grow: 1;
+    align-items: center;
+}
+
+.about-img img {
+    width: 250px;
+    border-radius: 2rem;
+}
+
+.about-subtitle, .about-text {
+    direction: rtl;
+    line-height: 1.8;
+    margin-right: 6rem;
+}
+
+/* skils section */
+
+.skills-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.skills-img img {
+    width: 280px;
+    border-radius: 2rem;
+}
+
+.skills-subtitle, .skills-text {
+    direction: rtl;
+    line-height: 1.8;
+}
+
+.skills-body {
+    margin-left: 6rem;
+}
+
+.skill-info {
+    display: flex;
+    box-shadow: 0px 4px 15px rgb(97, 95, 95);
+    border-radius: .8rem .8rem .2rem .2rem;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.skill-logo {
+    color: rgb(237, 30, 30);
+    font-size: 20px;
+    padding-left: 1rem;
+}
+
+.skill-name-logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.skill-name-logo * {
+    padding-left: 1rem;
+}
+
+.skill-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: purple;
+    height: .25rem;
+    /* width: 75%; */
+}
+
+.css {
+    width: 75%;
+}
+
+.html5 {
+    width: 85%;
+}
+
+.js {
+    width: 5%;
+}
+
+.uiux {
+    width: 20%;
+}
+
+/* end of skils section */
+
+
+
+
+
+/* section-projects */
+.projects-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+
+}
+
+
+
+.images-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+}
+
+.image-wrapper {
+    overflow: hidden;
+}
+
+.projects-img {
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    vertical-align: middle;
+
+}
+
+.projects-img:hover {
+    transform: scale(1.5);
+}
+
+/* end section-projects */
+/* contact section */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+
+
+}
+
+.btn1 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+}
+
+.contact-form * {
+    font-family: "Shabnam";
+    font-size: 1.4rem;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 13px;
+    margin: .3rem;
+}
+
+.contact-form input, textarea {
+    direction: rtl;
+    box-sizing: border-box;
+
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* Responsive Styling */
+@media (max-width : 1300px)
+{
+   section{
+       width: 80%;
+       padding: 0 10%;
+   }
+
+}
+@media(max-width:1200px){
+    section{
+        width: 90%;
+        padding: 0 5%;
+    }
+}
